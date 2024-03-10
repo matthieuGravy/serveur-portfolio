@@ -4,12 +4,12 @@ import { Request, Response } from "express";
 import Contact, { IContact } from "../models/contact";
 
 const schema = Joi.object({
-  prenom: Joi.string().required(),
-  nom: Joi.string().required(),
+  prenom: Joi.string().min(2).max(50).required(),
+  nom: Joi.string().min(2).max(50).required(),
   email: Joi.string().email().required(),
-  entreprise: Joi.string().required(),
-  sujet: Joi.string().required(),
-  message: Joi.string().required(),
+  entreprise: Joi.string().min(2).max(50).required(),
+  sujet: Joi.string().min(2).max(50).required(),
+  message: Joi.string().min(2).max(500).required(),
 });
 
 export const createContact = async (
