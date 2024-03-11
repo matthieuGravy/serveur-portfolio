@@ -1,4 +1,3 @@
-import express from "express";
 const cors = require("cors");
 
 const corsOptions = {
