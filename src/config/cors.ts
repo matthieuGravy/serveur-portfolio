@@ -2,8 +2,10 @@ import express from "express";
 const cors = require("cors");
 
 const corsOptions = {
-  //  origin: process.env.NODE_ENV === 'production' ? ['http://your-production-domain.com'] : '*',
-  origin: ["http://localhost:5173"],
+  origin:
+    process.env.NODE_ENV === "production"
+      ? [process.env.PRODUCTION_ORIGIN]
+      : [process.env.FRONTEND_URL],
   methods: "POST",
   credentials: true,
 };
