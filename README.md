@@ -56,6 +56,10 @@ Cette route permet recevoir les formulaire de contact :
 - **start:prod**: Démarre le serveur en utilisant le code JavaScript généré dans le dossier build à l'aide de node. Ce script est utilisé pour démarrer le serveur en environnement de production.
 
 ```bash
+pnpm i
+```
+
+```bash
 pnpm run start
 ```
 
