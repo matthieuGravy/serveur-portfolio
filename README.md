@@ -48,6 +48,26 @@ Cette route permet recevoir les formulaire de contact :
 - **nodemon**: Outil de surveillance des modifications des fichiers utilisé en développement pour redémarrer automatiquement le serveur lorsqu'un fichier est modifié.
 - **typescript**: Langage de programmation pour le développement d'applications Node.js, offrant un typage statique optionnel pour JavaScript.
 
+## Variables d'environnement
+
+Pour faire fonctionner le backend de l'application correctement, certaines variables d'environnement doivent être définies. Voici les variables d'environnement requises et leur description :
+
+- **DB_URI**: Lien vers la base de données MongoDB. Assure-toi de remplacer `<username>` et `<password>` par les informations d'identification appropriées.
+- **NODE_ENV**: Environnement d'exécution de l'application. Peut être défini sur "development" pour le développement local ou "production" pour l'environnement de production.
+- **FRONTEND_URL**: URL du frontend de l'application. Utilisé pour configurer les autorisations CORS et les redirections.
+- **PRODUCTION_ORIGIN**: URL d'origine de production pour les autorisations CORS. Assure-toi de remplacer "[https://site.com/](https://site.com/)" par l'URL réelle de ton site en production.
+
+### Exemple de fichier .env
+
+créer un fichier .env à la racine de ton projet et de définir les valeurs appropriées pour ces variables en fonction de ton environnement de développement ou de production.
+
+```.env
+DB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/mydatabase
+NODE_ENV=development
+FRONTEND_URL=http://localhost:5173
+PRODUCTION_ORIGIN=https://site.com/
+```
+
 ## Scripts
 
 - **test**: Lance les tests de l'application. Actuellement, il affiche simplement un message d'erreur indiquant qu'aucun test spécifié n'est trouvé.
