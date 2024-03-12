@@ -18,7 +18,7 @@ export const createContact = async (
 ): Promise<void> => {
   const { error } = schema.validate(req.body);
   if (error) {
-    console.log("Validation error:", error.details[0].message); // Ajoutez cette ligne
+    console.log("Validation error:", error.details[0].message);
     res.status(400).json({ message: error.details[0].message });
     return;
   }
@@ -30,7 +30,7 @@ export const createContact = async (
     res.status(201).json(newContact);
   } catch (error: unknown) {
     if (error instanceof Error) {
-      console.log("Save error:", error.message); // Ajoutez cette ligne
+      console.log("Save error:", error.message);
       res.status(400).json({ message: error.message });
     }
   }
