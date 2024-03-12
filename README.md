@@ -30,6 +30,43 @@ Cette route permet recevoir les formulaire de contact :
 - Statut 201 Created si le contact est créé avec succès.
 - Statut 400 Bad Request si les données fournies ne respectent pas le schéma de validation.
 
+## Dépendances de développement
+
+- **@types/cors**: Déclarations de types TypeScript pour le middleware cors.
+- **@types/express**: Déclarations de types TypeScript pour le framework Express.
+- **@types/joi**: Déclarations de types TypeScript pour la bibliothèque Joi.
+- **@types/mongoose**: Déclarations de types TypeScript pour la bibliothèque Mongoose.
+- **@types/node**: Déclarations de types TypeScript pour Node.js.
+
+## Dépendances de production
+
+- **cors**: Middleware Express pour gérer les requêtes CORS (Cross-Origin Resource Sharing).
+- **dotenv**: Permet de charger les variables d'environnement à partir d'un fichier .env.
+- **express**: Framework web minimaliste pour Node.js utilisé pour développer les routes et les contrôleurs de l'API.
+- **joi**: Bibliothèque de validation de schéma pour valider les données entrantes dans les requêtes HTTP.
+- **mongoose**: Outil de modélisation d'objets MongoDB pour Node.js, utilisé pour interagir avec la base de données MongoDB.
+- **nodemon**: Outil de surveillance des modifications des fichiers utilisé en développement pour redémarrer automatiquement le serveur lorsqu'un fichier est modifié.
+- **typescript**: Langage de programmation pour le développement d'applications Node.js, offrant un typage statique optionnel pour JavaScript.
+
+## Scripts
+
+- **test**: Lance les tests de l'application. Actuellement, il affiche simplement un message d'erreur indiquant qu'aucun test spécifié n'est trouvé.
+- **start**: Compile le code TypeScript en JavaScript en mode surveillance continue (-w) à l'aide de tsc (le compilateur TypeScript) et démarre le serveur avec nodemon. Cela permet de redémarrer automatiquement le serveur à chaque modification du code.
+- **build**: Compile le code TypeScript en JavaScript en une seule fois à l'aide de tsc. Ce script est généralement utilisé pour la construction en production.
+- **start:prod**: Démarre le serveur en utilisant le code JavaScript généré dans le dossier build à l'aide de node. Ce script est utilisé pour démarrer le serveur en environnement de production.
+
+```bash
+pnpm run start
+```
+
+```bash
+pnpm run build
+```
+
+```bash
+pnpm run start:prod
+```
+
 ## Fonctionnalités futures
 
 ### Newsletter
