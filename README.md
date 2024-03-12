@@ -59,7 +59,7 @@ Pour faire fonctionner le backend de l'application correctement, certaines varia
 
 ### Exemple de fichier .env
 
-créer un fichier .env à la racine de ton projet et de définir les valeurs appropriées pour ces variables en fonction de ton environnement de développement ou de production.
+Le fichier fichier .env doit êtré créé à la racine du projet et il doit définir les valeurs appropriées pour ces variables en fonction de l'environnement de développement ou de production.
 
 ```.env
 DB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/mydatabase
