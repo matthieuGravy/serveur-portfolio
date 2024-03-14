@@ -7,7 +7,11 @@ import cors from "cors";
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? [process.env.PRODUCTION_ORIGIN || "default_production_origin"]
+      ? [
+          process.env.PRODUCTION_ORIGIN ||
+            process.env.PRODUCTION_ORIGIN2 ||
+            "default_production_origin",
+        ]
       : [process.env.FRONTEND_URL || "default_frontend_url"],
   methods: "POST",
   credentials: true,
